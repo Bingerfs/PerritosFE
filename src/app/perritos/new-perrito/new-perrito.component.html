@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+      <div class="col-xs-8">
+          <label for="perritoName">Name</label>
+          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoName" id="perritoName" required
+              [(ngModel)]="perrito.name" name="perritoName">
+
+          <label for="perritoEdad">Edad</label>
+          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoEdad" id="perritoEdad" required
+              [(ngModel)]="perrito.edad" name="perritoEdad">
+
+      </div>
+      <div>
+        <br>
+      <input type="submit" class="nes-btn is-primary" value="Create" />
+      </div>        
+  </div>
+</form>
