@@ -2,8 +2,11 @@
   <div class="nes-container with-title spaced">
     <h3 class="title">Perritos</h3>
     <div class="nes-container is-rounded spaced" *ngFor="let row of rows">
-      <p>Name: {{ row.name }}</p>
+      <p>Name: {{ row.nombre }}</p>
       <p>Edad: {{ row.edad }}</p>
+      <p>Descripcion: {{ row.descripcion }}</p>
+      <p>Raza: {{ row.raza }}</p>
+      <p>Color: {{ row.color }}</p>
       <button class="nes-btn is-error" (click)="delete(row['id'])">Borrar</button>
                         
       <button class="nes-btn is-primary" (click)="update(row['id'])">Editar</button>
