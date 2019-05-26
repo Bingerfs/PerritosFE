@@ -1,30 +1,59 @@
-<form (ngSubmit)="onSubmit()">
+ 
 
-  <div class="form-group">
-      <div class="col-xs-8">
-          <label for="perritoNombre">Name</label>
-          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoNombre" id="perritoNombre" required
-              [(ngModel)]="perrito.nombre" name="perritoNombre">
 
-          <label for="perritoEdad">Edad</label>
-          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoEdad" id="perritoEdad" required
-              [(ngModel)]="perrito.edad" name="perritoEdad">
+<header class="main-header" id="header">
+  <div class="bg-color">
+    <div class="container text-center">
+      <div class="wrapper wow fadeInUp delay-05s">
+        <br/>
+        <h4 class="title">PERRITOS</h4>
+        <div class= "agregar-perritos">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <div class="col-xs-8">
+                    <label for="perritoNombre">Nombre:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="perritoNombre" id="perritoNombre" required
+                        [(ngModel)]="perrito.nombre" name="perritoNombre">
+                    <br/>
+                    <label for="perritoEdad">Edad:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="perritoEdad" id="perritoEdad" required
+                        [(ngModel)]="perrito.edad" name="perritoEdad">
+                    <br/>
+          
+                    <label for="perritoDescripcion">Descripcion:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="perritoDescripcion" id="perritoDescripcion" required
+                        [(ngModel)]="perrito.descripcion" name="perritoDescripcion">
+                    <br/>
+          
+                    <label for="perritoRaza">Raza:</label>
+                    <br/>
+          
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="perritoRaza" id="perritoRaza" required
+                            [(ngModel)]="perrito.raza" name="perritoRaza">
+                   <br/>
+          
+                    <label for="perritoColor">Color</label>
+                    <br/>
 
-          <label for="perritoDescripcion">Descripcion</label>
-          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoDescripcion" id="perritoDescripcion" required
-              [(ngModel)]="perrito.descripcion" name="perritoDescripcion">
-
-          <label for="perritoRaza">Raza</label>
-          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoRaza" id="perritoRaza" required
-                  [(ngModel)]="perrito.raza" name="perritoRaza">
-
-          <label for="perritoColor">Color</label>
-          <input type="text" style="width: 300px" class="form-control nes-input" name="perritoColor" id="perritoColor" required
-                  [(ngModel)]="perrito.color" name="perritoColor">
-      </div>
-      <div>
-        <br>
-      <input type="submit" class="nes-btn is-primary" value="Create" />
-      </div>        
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="perritoColor" id="perritoColor" required
+                            [(ngModel)]="perrito.color" name="perritoColor">
+                    <br/>
+          
+                </div>
+                <div>
+                  <br>
+                <input type="submit" class="nes-btn is-primary" value="Registrar" />
+                </div>
+            </div>
+          </form>
+          </div>      </div>
+    </div>
   </div>
-</form>
+</header>

@@ -1,6 +1,19 @@
+
+ 
+
+
+<header class="main-header" id="header">
+  <div class="bg-color">
+    <div class="container text-center">
+      <div class="wrapper wow fadeInUp delay-05s">
+        <br/>
+        <h4 class="title">PERRITOS</h4>
+           </div>
+    </div>
+  </div>
+</header>
 <div class="panel panel-default" style="margin-top:10px;">
   <div class="nes-container with-title spaced">
-    <h3 class="title">Perritos</h3>
     <div class="nes-container is-rounded spaced" *ngFor="let row of rows">
       <p>Name: {{ row.nombre }}</p>
       <p>Edad: {{ row.edad }}</p>
@@ -8,9 +21,12 @@
       <p>Raza: {{ row.raza }}</p>
       <p>Color: {{ row.color }}</p>
       <button class="nes-btn is-error" (click)="delete(row['id'])">Borrar</button>
-                        
+
       <button class="nes-btn is-primary" (click)="update(row['id'])">Editar</button>
     </div>
   </div>
-  
+  <div >
+    <a class="agregar" [routerLink]="['/perritos/add']">Agregar perritos</a>
+  </div>
+
 </div>

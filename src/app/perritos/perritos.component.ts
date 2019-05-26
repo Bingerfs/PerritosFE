@@ -44,7 +44,8 @@ export class PerritosComponent implements OnInit {
   }
   public update(id:string){
     console.log("update : " + id );
-    this.router.navigateByUrl('/perritos/add/' + id);
+    this.router.navigate(['/perritos/add/',id]);
+
   }
 
 }

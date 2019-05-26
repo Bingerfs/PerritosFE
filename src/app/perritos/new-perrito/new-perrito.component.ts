@@ -44,9 +44,10 @@ export class NewPerritoComponent implements OnInit {
     console.log(r);
     this.perrito = new Perritos();
 
-    this.router.navigateByUrl('/perritos');
 
     });
+    this.router.navigateByUrl('/perritos');
+
 }
 
 }
