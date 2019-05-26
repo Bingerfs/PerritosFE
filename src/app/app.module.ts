@@ -9,12 +9,18 @@ import { ApiService } from './api.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PerritosComponent,
     NewPerritoComponent,
+    HomeComponent,
+    NavigationBarComponent,
+    FooterComponent,
   ],
   imports: [
     FormsModule,
@@ -36,7 +42,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         path: 'perritos/add/:id',
         component: NewPerritoComponent,
         data: {animation: 'addPerritos'}
-      }          
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
+      }
+
     ]),
   ],
   providers: [ApiService],

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { slideInAnimation } from './route-animation';
 
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @Component({
   selector: 'prac3fe-root',

@@ -1,28 +1,10 @@
-<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-<div class="container">
-  <div class="cJumbo">
-      <img class="img-responsive" src="http://66.media.tumblr.com/3e8f391f294af1e612e58fef1492cfa6/tumblr_mjok1bhPIB1rfjowdo1_500.gif" alt="Italian Trulli">
-  </div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-      <a class="navbar-brand" routerLink="/perritos">Perritos</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" routerLink="/perritos/add">Agregar perritos<span class="sr-only">(current)</span></a>
-        </div>
-      </div>
-    </nav>
-  <div class="panel panel-primary">
-    <div class="panel-body">
-
-        <div [@routeAnimations]="outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']">
-            <router-outlet #outlet="outlet"></router-outlet>
-        </div>
-
-
-    </div>
-  </div>
-</div>
+<!-- <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> -->
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+<prac3fe-navigation-bar></prac3fe-navigation-bar>
+<router-outlet></router-outlet> 
+<prac3fe-footer></prac3fe-footer>
+ 

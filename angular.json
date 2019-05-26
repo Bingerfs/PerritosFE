@@ -23,13 +23,20 @@
               "src/assets"
             ],
             "styles": [
-              "C:/Users/HP/Documents/prac3Sisweb/prac3fe/node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.css"
+              // "C:/Users/HP/Documents/prac3Sisweb/prac3fe/node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/font-awesome.min.css"
             ],
             "scripts": [
-              "C:/Users/HP/Documents/prac3Sisweb/prac3fe/node_modules/jquery/dist/jquery.js",
-              "C:/Users/HP/Documents/prac3Sisweb/prac3fe/node_modules/tether/dist/js/tether.js",
-              "C:/Users/HP/Documents/prac3Sisweb/prac3fe/node_modules/bootstrap/dist/js/bootstrap.js"
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/jquery.easing.min.js",
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/wow.js"
+              // "src/assets/js/"
+              // "/node_modules/jquery/dist/jquery.js",
+              // "/node_modules/tether/dist/js/tether.js",
+              // "/node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {

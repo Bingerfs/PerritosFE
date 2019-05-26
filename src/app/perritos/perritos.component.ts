@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './perritos.component.html',
   styleUrls: ['./perritos.component.css']
 })
+
 export class PerritosComponent implements OnInit {
 
   public columns = ['id','name'];

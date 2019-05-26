@@ -1,5 +1,5 @@
 export class Perritos{
     public edad:number;
-    public nombre:string;
+    public name:string;
     public id:number;
 }
