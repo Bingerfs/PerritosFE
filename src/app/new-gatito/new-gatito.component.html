@@ -1,0 +1,58 @@
+ 
+
+
+<header class="main-header" id="header">
+  <div class="bg-color">
+    <div class="container text-center">
+      <div class="wrapper wow fadeInUp delay-05s">
+        <br/>
+        <h4 class="title">gatitoS</h4>
+        <div class= "agregar-gatitos">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <div class="col-xs-8">
+                    <label for="gatitoNombre">Nombre:</label>
+                    <br/>
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="gatitoNombre" id="gatitoNombre" required
+                        [(ngModel)]="gatito.nombre" name="gatitoNombre">
+                    <br/>
+                    <label for="gatitoEdad">Edad:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="gatitoEdad" id="gatitoEdad" required
+                        [(ngModel)]="gatito.edad" name="gatitoEdad">
+                    <br/>
+          
+                    <label for="gatitoNivelMaldad">Nivel de maldad:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="gatitoNivelMaldad" id="gatitonivel_maldad" required
+                        [(ngModel)]="gatito.nivel_maldad" name="gatitoNivelMaldad">
+                    <br/>
+          
+                    <label for="gatitoRaza">Raza:</label>
+                    <br/>
+          
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="gatitoRaza" id="gatitoRaza" required
+                            [(ngModel)]="gatito.raza" name="gatitoRaza">
+                   <br/>
+          
+                    <label for="gatitoComidaFavorita">Comida favorita</label>
+                    <br/>
+
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="gatitoComidaFavorita" id="gatitocomida_favorita" required
+                            [(ngModel)]="gatito.comidad_favorita" name="gatitoComidaFavorita">
+                    <br/>
+          
+                </div>
+                <div>
+                  <br>
+                <input type="submit" class="nes-btn is-primary" value="Registrar" />
+                </div>
+            </div>
+          </form>
+          </div>      </div>
+    </div>
+  </div>
+</header>

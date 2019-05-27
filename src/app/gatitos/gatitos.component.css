@@ -1,3 +1,58 @@
+
+.gatitos{
+  background-image: url(https://i.pinimg.com/originals/4d/5d/2e/4d5d2e5452508a2a05e673cc7190a53d.jpg);
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+
+  padding-left: 20%;
+  align-content: center;
+  border: 5px solid rgba(70, 63, 3, 0.692);
+  
+}
+.row{
+  color: rgba(0, 0, 0);
+  font-size: 16pt;
+  font-weight: bold;
+
+
+}
+button {
+  background-color: rgb(76, 86, 175); 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.spaced{
+    margin-bottom: 20px !important;
+}
+.agregar-gatito {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+
+  padding-left: 20%;
+  align-content: center;
+
+}
+
+.agregar{
+  color: white;
+
+  font-size: 120%;
+}
+.main-header {
+  background: url(https://s3-eu-west-1.amazonaws.com/pa-digital-blog-pro/uploads/2018/04/13091637/enferedades-problemas-gatitos.jpg) no-repeat;
+  background-size: cover;
+  min-height: 610px;
+}
 /*
     Theme Name: Bethany
     Theme URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
@@ -388,7 +443,6 @@ body {
   .footer-social a {
     font-size: 18px;
     color: #666;
-
   }
 
   .link-dec, .link-dec:hover {

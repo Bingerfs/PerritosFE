@@ -32,7 +32,7 @@ export class NewPerritoComponent implements OnInit {
   }
 
   public onSubmit(){
-    console.log("Adding a perrito: " + this.perrito.name);
+    console.log("Adding a perrito: " + this.perrito.nombre);
     if(this.perrito.id){
     this.apiService.update("perritos/"+this.perrito.id,this.perrito).subscribe((r)=>{
         console.log(r);

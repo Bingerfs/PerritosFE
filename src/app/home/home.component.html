@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <header class="main-header" id="header">
   <div class="bg-color">
     <div class="container text-center">
@@ -9,11 +12,27 @@
         <h2 class="top-title">TÚ PUEDES CAMBIAR MI VIDA</h2>
         <h3 class="title">ADOPTAME</h3>
         <h4 class="sub-title">Construyamos un hogar</h4>
+        <button type="submit" class="btn btn-submit">Ingresa ya</button>
+        <br/>
+        <br/>
+
+        <div class="search">
+          <input id="search" type="text" class="searchTerm" placeholder="What are you looking for?">
+              <button class="searchButton" (click)="buscar('a')">
+            <i class="fa fa-search"></i>
+         </button>
+       </div>
+
         <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/signin']" class="btn btn-submit">Ingresa ya</a>
       </div>
     </div>
   </div>
 </header>
+<div class="busqueda" *ngFor="let row of rows">
+    <p class="row"> {{ row.title }}</p>
+    <!-- <p class="row">Ir <a>{{ row.link }}</a></p> -->
+
+</div>
 <section id="cta-1">
   <div class="container">
     <div class="row">
@@ -37,7 +56,7 @@
       </div>
       <div class="col-md-9">
         <div class="col-md-6 wow fadeInRight delay-02s">
-         
+
           <div class="icon-text">
             <h3 class="txt-tl">Adoptar</h3>
             <p class="txt-para">Adoptar es un acto de amor. Encuentra un amigo especial que siempre estará contigo.</p>
@@ -61,7 +80,7 @@
             <p class="txt-para">Puedes ayudar a los amigos animales convirtiéndote en voluntario. </p>
           </div>
         </div>
-      
+
       </div>
     </div>
   </div>
