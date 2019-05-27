@@ -12,7 +12,7 @@
         <h2 class="top-title">TÚ PUEDES CAMBIAR MI VIDA</h2>
         <h3 class="title">ADOPTAME</h3>
         <h4 class="sub-title">Construyamos un hogar</h4>
-        <button type="submit" class="btn btn-submit">Ingresa ya</button>
+        <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/signin']" class="btn btn-submit">Ingresa ya</a>
         <br/>
         <br/>
 
@@ -23,7 +23,6 @@
          </button>
        </div>
 
-        <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/signin']" class="btn btn-submit">Ingresa ya</a>
       </div>
     </div>
   </div>

@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   public rows;
 
 
-  constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {
+  constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}
     
   
 

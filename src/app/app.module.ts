@@ -27,7 +27,6 @@ import { LoginComponent } from './login/login.component'
     HomeComponent,
     NavigationBarComponent,
     FooterComponent,
- Gatitos,
     GatitosComponent,
     NewGatitoComponent,
 
@@ -76,6 +75,8 @@ import { LoginComponent } from './login/login.component'
         path: 'gatitos/add/:id',
         component: NewGatitoComponent,
         data: {animation: 'addGatitos'}
+      },
+      {
         path: 'signup',
         component: SignupComponent
       },
