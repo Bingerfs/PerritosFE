@@ -1,5 +1,5 @@
 
- 
+
 
 
 <header class="main-header" id="header">
@@ -14,19 +14,18 @@
 </header>
 <div class="panel panel-default" style="margin-top:10px;">
   <div class="nes-container with-title spaced">
-    <div class="nes-container is-rounded spaced" *ngFor="let row of rows">
-      <p>Name: {{ row.nombre }}</p>
-      <p>Edad: {{ row.edad }}</p>
-      <p>Descripcion: {{ row.descripcion }}</p>
-      <p>Raza: {{ row.raza }}</p>
-      <p>Color: {{ row.color }}</p>
-      <button class="nes-btn is-error" (click)="delete(row['id'])">Borrar</button>
-
-      <button class="nes-btn is-primary" (click)="update(row['id'])">Editar</button>
+    <div class="perritos" *ngFor="let row of rows">
+      <p class="row">Nombre: {{ row.nombre }}</p>
+      <p class="row">Edad: {{ row.edad }}</p>
+      <p class="row">Descripcion: {{ row.descripcion }}</p>
+      <p class="row">Raza: {{ row.raza }}</p>
+      <p class="row">Color: {{ row.color }}</p>
+      <button (click)="delete(row['id'])">Borrar</button>
+      <button  (click)="update(row['id'])">Editar</button>
     </div>
   </div>
-  <div >
-    <a class="agregar" [routerLink]="['/perritos/add']">Agregar perritos</a>
+  <div class="agregar-perrito">
+   <button> <a class="agregar" [routerLink]="['/perritos/add']">Agregar perrito</a></button>
   </div>
 
 </div>
