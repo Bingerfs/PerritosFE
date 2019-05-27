@@ -4,6 +4,41 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
 */
+.search {
+  width: 30%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid highlightColor;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus {
+  color: highlightColor;
+}
+
+.searchButton {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid highlightColor;
+  background: highlightColor;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 
 body {
   line-height: 1.5;
@@ -253,7 +288,7 @@ h3.txt-tl {
   background-repeat: repeat-y;
   background-position: center center;
 }
- 
+
 .bg-image-2 {
   background: url('./cta-banner.jpg') no-repeat center fixed;
   -webkit-background-size: 100% auto;
@@ -386,25 +421,6 @@ a, a:hover {
 
 /****/
 
-#footer {
-  background-color: #191919;
-  padding: 20px 0px;
-}
-
-.footer-copyright {
-  color: #fff;
-  line-height: 32px;
-  text-align: left;
-}
-
-.footer-social {
-  float: right;
-}
-
-.footer-social a {
-  font-size: 18px;
-  color: #666;
-}
 
 .link-dec, .link-dec:hover {
   color: #000;
@@ -429,7 +445,7 @@ a, a:hover {
   .navbar-default .navbar-nav>li>a {
     text-align: center;
   }
-  
+
   .top-title {
     font-size: 15px;
   }

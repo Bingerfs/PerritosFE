@@ -10,55 +10,55 @@ body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
   }
-  
+
   ol, ul {
     list-style: none;
   }
-  
+
   blockquote, q {
     quotes: none;
   }
-  
+
   blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
   }
-  
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
-  
+
   .section-padding {
     padding: 60px 0px;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
   }
-  
+
   /**media Queries**/
-  
+
   .navbar-default {
     background-color: transparent;
   }
-  
 
-  
+
+
   .bg-color {
     background-color: RGBA(0, 0, 0, 0.41);
   }
-  
+
   .nav>li>a {
     padding: 0px;
   }
-  
+
   .navbar-brand {
     padding: 0px;
     height: inherit;
     font-family: 'Lato', sans-serif;
   }
-  
+
   .navbar-default .navbar-brand {
     color: #fff;
     font-size: 34px;
@@ -66,45 +66,45 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
   }
-  
+
   .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #FFD34E;
     text-transform: uppercase;
       background-color: transparent;
   }
-  
+
   .navbar-default .navbar-nav>li>a {
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
       background-color: transparent;
   }
-  
+
   .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: #FFD34E;
   }
-  
+
   .navbar-fixed-top {
     padding: 40px 0;
     transition: all 0.5s;
   }
-  
+
   @media (max-width: 768px) {
       .navbar-collapse {
           background: rgba(0, 0, 0, 0.8);
           border-top: 0;
       }
   }
-  
+
   .top-nav-collapse {
     background: rgba(0, 0, 0, 0.8);
     padding: 25px 0;
   }
-  
+
   .wrapper {
     padding: 90px 0px 130px;
   }
-  
+
   .top-title {
     z-index: 5;
     font-size: 27px;
@@ -115,7 +115,7 @@ body {
     opacity: 1;
     text-transform: uppercase;
   }
-  
+
   .sub-title {
     font-size: 50px;
     font-weight: 700;
@@ -125,7 +125,7 @@ body {
     opacity: 1;
     text-transform: uppercase;
   }
-  
+
   .title {
     font-size: 123px;
     font-weight: 700;
@@ -136,7 +136,7 @@ body {
     text-transform: uppercase;
     padding: 25px 0px;
   }
-  
+
   .btn-submit {
     background: #FFD34E;
     border: 0px;
@@ -158,49 +158,49 @@ body {
     margin-top: 25px;
     border: 2px solid #FFD34E;
   }
-  
+
   .btn-submit:hover {
     background: #fff;
   }
-  
+
   /****/
-  
+
   #cta-1 {
     padding: 40px 0px;
   }
-  
+
   .cta-info {
     border: 5px solid #FFD34E;
     padding: 40px 0px;
   }
-  
+
   .cta-info h3 {
     font-size: 24px;
   }
-  
+
   .dec-tec {
     font-size: 34px;
   }
-  
+
   /****/
-  
+
   #feature {
     background-color: #f8f8f8;
   }
-  
+
   .head-title {
     color: #2b2b2b;
     font-size: 32px;
     font-weight: 700;
   }
-  
+
   .botm-line {
     background-color: #2b2b2b;
     width: 34px;
     height: 3px;
     display: inline-block;
   }
-  
+
   .section-title:hover .botm-line {
     width: 70px;
     /* For Safari 3.1 to 6.0 */
@@ -214,11 +214,11 @@ body {
     transition-timing-function: linear;
     transition-delay: 1s;
   }
-  
+
   p {
     color: #888;
   }
-  
+
   .icon {
     position: relative;
     height: 48px;
@@ -227,60 +227,60 @@ body {
     margin-top: 14px;
     margin-bottom: 20px;
   }
-  
+
   .icon i {
     font-size: 35px;
   }
-  
+
   .icon-text {
     margin-left: 73px;
     padding: 0px 25px 25px 0px;
   }
-  
+
   h3.txt-tl {
     font-size: 24px;
     line-height: 1.35;
   }
-  
+
   /****/
-  
+
   .parallax {
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-position: center center;
   }
- 
+
   .section {
     position: relative;
     padding: 88px 0 67px 0;
     display: block;
   }
-  
+
   .cta-txt h3 {
     font-size: 32px;
     margin-bottom: 10px;
     font-weight: 700;
     color: #fff;
   }
-  
+
   .cta-txt p {
     color: #fff;
   }
-  
+
   /****/
-  
+
   .portfolio-box {
     margin-bottom: 15px;
   }
-  
+
   .padding-right-zero {
     padding-right: 0px;
   }
-  
+
   #contact {
     background-color: #f8f8f8;
   }
-  
+
   .validation {
     color: red;
     display: none;
@@ -288,7 +288,7 @@ body {
     font-weight: 400;
     font-size: 13px;
   }
-  
+
   #sendmessage {
     color: green;
     border: 1px solid green;
@@ -298,7 +298,7 @@ body {
     font-weight: 600;
     margin-bottom: 15px;
   }
-  
+
   #errormessage {
     color: red;
     display: none;
@@ -308,52 +308,52 @@ body {
     font-weight: 600;
     margin-bottom: 15px;
   }
-  
+
   #sendmessage.show, #errormessage.show, .show {
     display: block;
   }
-  
+
   .black {
     color: #000 !important;
     font-weight: 600;
   }
-  
+
   .btn-send {
     border-radius: 0px;
     color: #000;
     background-color: #FFD34E;
   }
-  
+
   a, a:hover {
     color: #FFD34E;
   }
-  
+
   .cont-title {
     font-size: 24px;
     padding: 15px 0px;
   }
-  
+
   .location-info p span {
     display: inline-block;
   }
-  
+
   .location-info p span {
     width: 40px;
     font-size: 24px;
     color: #666;
     vertical-align: middle;
   }
-  
+
   .location-info p {
     margin-bottom: 5px;
   }
-  
+
   .location-info p {
     font-size: 18px;
     line-height: 32px;
     color: #000;
   }
-  
+
   .contact-icon-container {
     position: absolute;
     top: -38px;
@@ -367,41 +367,42 @@ body {
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
   }
-  
+
   /****/
-  
+
   #footer {
     background-color: #191919;
     padding: 20px 0px;
   }
-  
+
   .footer-copyright {
     color: #fff;
     line-height: 32px;
     text-align: left;
   }
-  
+
   .footer-social {
     float: right;
   }
-  
+
   .footer-social a {
     font-size: 18px;
     color: #666;
+
   }
-  
+
   .link-dec, .link-dec:hover {
     color: #000;
   }
-  
+
   /****/
-  
+
   @media (min-width: 451px) and (max-width: 900px) {
     .section-title {
       margin-bottom: 15px;
     }
   }
-  
+
   @media (min-width: 20px) and (max-width: 450px) {
     .navbar-toggle:hover, .navbar-toggle {
       background-color: #fff;
@@ -443,6 +444,5 @@ body {
       font-size: 20px;
     }
   }
-   
+
   /****/
-  
