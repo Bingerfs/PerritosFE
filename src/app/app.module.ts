@@ -12,8 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { GatitosComponent } from './gatitos/gatitos.component';
 import { NewGatitoComponent } from './new-gatito/new-gatito.component';
+import { SignupComponent } from './signup/signup.component';
+import {AngularTokenModule} from 'angular-token';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -23,14 +27,21 @@ import { NewGatitoComponent } from './new-gatito/new-gatito.component';
     HomeComponent,
     NavigationBarComponent,
     FooterComponent,
+ Gatitos,
     GatitosComponent,
     NewGatitoComponent,
+
+    SignupComponent,
+    LoginComponent,
   ],
   imports: [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     BrowserModule,
+    AngularTokenModule.forRoot({
+     apiBase: 'http://localhost:3000'
+    }),
     RouterModule.forRoot([
       {
         path: 'perritos',
@@ -65,11 +76,16 @@ import { NewGatitoComponent } from './new-gatito/new-gatito.component';
         path: 'gatitos/add/:id',
         component: NewGatitoComponent,
         data: {animation: 'addGatitos'}
+        path: 'signup',
+        component: SignupComponent
+      },
+      {
+        path: 'signin',
+        component: LoginComponent
       }
-
     ]),
   ],
-  providers: [ApiService],
+  providers: [ApiService, AngularTokenModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

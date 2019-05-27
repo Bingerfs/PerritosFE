@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { GatitosComponent } from './gatitos/gatitos.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component'
 
 
 const APPROUTES: Routes = [
@@ -27,6 +29,12 @@ const APPROUTES: Routes = [
       component: NavigationBarComponent     },
       { path: 'footer',
       component: FooterComponent     },
+    { path: 'signup',
+      component: SignupComponent},
+    {
+      path: 'signin',
+      component: LoginComponent
+    }
 ];
 
 // tslint:disable-next-line:eofline

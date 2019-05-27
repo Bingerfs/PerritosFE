@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
 import { ApiService } from '../api.service';
+import { AngularTokenService } from 'angular-token'
 
 @Component({
   selector: 'prac3fe-home',
@@ -10,7 +11,10 @@ import { ApiService } from '../api.service';
 export class HomeComponent implements OnInit {
   public rows;
 
-  constructor(public apiService: ApiService , public router : Router) { }
+
+  constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {
+    
+  
 
   ngOnInit() {
   }

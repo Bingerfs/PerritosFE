@@ -1,6 +1,20 @@
 /* @import url("../assets/css/bootstrap.min.css"); */
 
 /**media Queries**/
+a,
+    div,
+    ion-item,
+    .item-md,
+    .item-ios,
+    .segment-button,
+    .select-md
+    .select-ios,
+    .button-ios,
+    .button-md,
+    .searchbar-md,
+    .searchbar-ios {
+        pointer-events: auto !important;
+    }
 
 .navbar-default {
   background-color: transparent;
