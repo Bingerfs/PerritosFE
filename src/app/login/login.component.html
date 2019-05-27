@@ -1,0 +1,36 @@
+<header class="main-header" id="header">
+  <div class="bg-color">
+    <div class="container text-center">
+      <div class="wrapper wow fadeInUp delay-05s">
+        <br/>
+        <h4 class="title">Login</h4>
+        <div class= "agregar-perritos">
+          <form (ngSubmit)="onSubmitSignIn()">
+            <div class="form-group">
+                <div class="col-xs-8">
+                    <label for="login">Email:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="login" id="login" required
+                        [(ngModel)]="signInUser.login" name="login" class="validate">
+                    <br/>
+                    <label for="password">Password:</label>
+                    <br/>
+          
+                    <input type="text" style="width: 300px" class="form-control nes-input" name="password" id="password" required
+                        [(ngModel)]="signInUser.password" name="password">
+                    <br/>
+          
+        
+          
+                </div>
+                <div>
+                  <br>
+                <input type="submit" class="nes-btn is-primary" value="Registrar" />
+                </div>
+            </div>
+          </form>
+          </div>      </div>
+    </div>
+  </div>
+</header>

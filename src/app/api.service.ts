@@ -11,12 +11,18 @@ export class ApiService {
 
   API_URL : string = "http://localhost:3000/";
 
-  public get(path) {
+  public get(path:string) {
 
     var endpoint = this.API_URL + path;
     return this.http.get(endpoint);
 
   }
+
+  public signUser(path:string, body:any){
+    var endpoint = this.API_URL + path;
+    return this.http.get(endpoint, body);
+  }
+
 
   // create method 
   public post(path:string,body:any) {
