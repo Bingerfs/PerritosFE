@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { GatitosComponent } from './gatitos/gatitos.component';
+import { NewGatitoComponent } from './new-gatito/new-gatito.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     NavigationBarComponent,
     FooterComponent,
+    GatitosComponent,
+    NewGatitoComponent,
   ],
   imports: [
     FormsModule,
@@ -46,6 +50,21 @@ import { FooterComponent } from './footer/footer.component';
       {
         path: 'home',
         component: HomeComponent,
+      },
+      {
+        path: 'gatitos',
+        component: GatitosComponent,
+        data: {animation: 'Gatitos'}
+      },
+      {
+        path: 'gatitos/add',
+        component: NewGatitoComponent,
+        data: {animation: 'addGatitos'}
+      },
+      {
+        path: 'gatitos/add/:id',
+        component: NewGatitoComponent,
+        data: {animation: 'addGatitos'}
       }
 
     ]),
