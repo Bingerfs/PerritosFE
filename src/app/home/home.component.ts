@@ -19,14 +19,12 @@ export class HomeComponent implements OnInit {
   public buscar(){
     let cadena = document.getElementById("search") as HTMLInputElement;
     console.log("buscando : " + cadena.value);
-    var path = 'google_custom_search/index?parametro=' + cadena;
+    var path = 'google_custom_search/index?parametro=' + cadena.value;
     this.apiService.get(path).subscribe((data )=>{
       console.log(data);
-      this.rows = data;
+      this.rows = data.items;
       });
-      // this.apiService.get("perritos/"+data.id).subscribe((data : Perritos)=>{
-      //   this.perrito = data;
-      //   });
+     
 
   }
 }

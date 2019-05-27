@@ -1,9 +1,11 @@
-/*
-    Theme Name: Bethany
-    Theme URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-*/
+.busqueda{
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 1%;
+  padding: 0%;
+  align-content: center;
+  /* border: 0px solid rgba(70, 63, 3, 0.692); */
+}
 .search {
   width: 30%;
   position: relative;
