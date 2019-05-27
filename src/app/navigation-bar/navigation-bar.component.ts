@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
+import { AngularTokenService } from 'angular-token';
 
 @Component({
   selector: 'prac3fe-navigation-bar',
@@ -8,9 +9,14 @@ import { RouterLink, Router } from '@angular/router';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public tokenAuthService:AngularTokenService) { 
+  }
 
   ngOnInit() {
+  }
+
+  salir(){
+    this.tokenAuthService.signOut().subscribe()
   }
 
 }

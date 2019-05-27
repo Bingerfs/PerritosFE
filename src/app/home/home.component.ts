@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
+import { AngularTokenService } from 'angular-token'
 
 @Component({
   selector: 'prac3fe-home',
@@ -8,7 +9,9 @@ import { RouterLink, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public tokenAuthService:AngularTokenService) {
+    
+   }
 
   ngOnInit() {
   }

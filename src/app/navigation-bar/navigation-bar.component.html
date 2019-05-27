@@ -17,7 +17,8 @@
           <li class="active"><a [routerLink]="['/home']">Home</a></li>
           <li><a [routerLink]="['/perritos']">PERRITOS</a></li>
           <li><a [routerLink]="['/gatitos']">GATITOS</a></li>
-          <li><a href="#contact">CONTACTO</a></li>
+          <li><a href="#">CONTACTO</a></li>
+          <li><a *ngIf="tokenAuthService.userSignedIn()" (click)="salir()" type="button">LOGOUT</a></li>
         </ul>
       </div>
     </div>

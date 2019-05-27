@@ -32,6 +32,7 @@ export class SignupComponent implements OnInit {
         if (res.status == 200){
           console.log(res.json());
           alert("Registrado");
+          this.router.navigateByUrl('/signin');
         }
 
       },
@@ -39,6 +40,7 @@ export class SignupComponent implements OnInit {
       (err) => {
         console.log(err);
         alert("Error");
+        this.router.navigateByUrl('/signup');
       }
   )
   }

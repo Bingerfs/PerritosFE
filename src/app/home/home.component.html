@@ -9,7 +9,7 @@
         <h2 class="top-title">TÚ PUEDES CAMBIAR MI VIDA</h2>
         <h3 class="title">ADOPTAME</h3>
         <h4 class="sub-title">Construyamos un hogar</h4>
-        <a [routerLink]="['/signin']" class="btn btn-submit">Ingresa ya</a>
+        <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/signin']" class="btn btn-submit">Ingresa ya</a>
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <a [routerLink]="['/signup']" class="btn btn-submit">REGISTRATE YA</a>
+        <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/signup']" class="btn btn-submit">REGISTRATE YA</a>
       </div>
     </div>
   </div>
