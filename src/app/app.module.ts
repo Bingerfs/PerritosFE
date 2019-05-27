@@ -13,7 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
-import {AngularTokenModule} from 'angular-token'
+import {AngularTokenModule} from 'angular-token';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {AngularTokenModule} from 'angular-token'
     NavigationBarComponent,
     FooterComponent,
     SignupComponent,
+    LoginComponent,
   ],
   imports: [
     FormsModule,
@@ -56,8 +58,11 @@ import {AngularTokenModule} from 'angular-token'
       {
         path: 'signup',
         component: SignupComponent
+      },
+      {
+        path: 'signin',
+        component: LoginComponent
       }
-
     ]),
   ],
   providers: [ApiService, AngularTokenModule],
