@@ -20,6 +20,8 @@ export class SignupComponent implements OnInit {
   constructor(public apiService: ApiService , public acRoute : ActivatedRoute, private router: Router, public tokenAuthService:AngularTokenService) { }
   
   ngOnInit() {
+    if(this.tokenAuthService.userSignedIn()==true)
+      this.router.navigateByUrl('/home');
     
     
   }

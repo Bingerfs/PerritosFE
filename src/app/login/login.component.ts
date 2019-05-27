@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   constructor(public apiService: ApiService , public acRoute : ActivatedRoute, private router: Router, public tokenAuthService:AngularTokenService) { }
 
   ngOnInit() {
+    if(this.tokenAuthService.userSignedIn()==true)
+      this.router.navigateByUrl('/home');
   }
 
   onSubmitSignIn(){
@@ -28,8 +30,7 @@ export class LoginComponent implements OnInit {
 
         if (res.status == 200){
           console.log(res);
-          alert("Registrado");
-          this.router.navigateByUrl('/home');
+          this.router.navigate(['home']);
         }
 
       },
