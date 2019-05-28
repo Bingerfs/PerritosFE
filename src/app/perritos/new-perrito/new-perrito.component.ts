@@ -35,19 +35,14 @@ export class NewPerritoComponent implements OnInit {
     console.log("Adding a perrito: " + this.perrito.nombre);
     if(this.perrito.id){
     this.apiService.update("perritos/"+this.perrito.id,this.perrito).subscribe((r)=>{
-        console.log(r);
-        alert("Perrito updated !");
+      this.router.navigateByUrl('/perritos')
     })
     }
     else
     this.apiService.post("perritos",this.perrito).subscribe((r)=>{
-    console.log(r);
-    this.perrito = new Perritos();
-
-
+      this.perrito = new Perritos();
+      this.router.navigateByUrl('/perritos');
     });
-    this.router.navigateByUrl('/perritos');
-
 }
 
 }

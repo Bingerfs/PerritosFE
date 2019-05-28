@@ -35,18 +35,16 @@ export class NewGatitoComponent implements OnInit {
     console.log("Adding a gatito: " + this.gatito.nombre);
     if(this.gatito.id){
     this.apiService.update("gatitos/"+this.gatito.id,this.gatito).subscribe((r)=>{
-        console.log(r);
-        alert("gatito updated !");
+      this.router.navigateByUrl('/gatitos');
     })
     }
     else
     this.apiService.post("gatitos",this.gatito).subscribe((r)=>{
-    console.log(r);
+      this.router.navigateByUrl('/gatitos');
     this.gatito = new Gatitos();
 
 
     });
-    this.router.navigateByUrl('/gatitos');
 
 }
 
