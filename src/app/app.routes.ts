@@ -7,33 +7,40 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { FooterComponent } from './footer/footer.component';
 import { GatitosComponent } from './gatitos/gatitos.component';
 import { SignupComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import {AngularTokenModule, AngularTokenService} from 'angular-token';
 
 
 const APPROUTES: Routes = [
     { path: 'perritos',
-      component: PerritosComponent },
+      component: PerritosComponent,
+      canActivate: [AngularTokenService] },
     { path: 'perritos/add',
-      component: NewPerritoComponent },
+      component: NewPerritoComponent,
+      canActivate: [AngularTokenService] },
     { path: 'perritos/add/:id',
-      component: NewPerritoComponent },
+      component: NewPerritoComponent,
+      canActivate: [AngularTokenService] },
     { path: 'gatitos',
-      component: GatitosComponent },
+      component: GatitosComponent,
+      canActivate: [AngularTokenService] },
     { path: 'gatitos/add',
-      component: NewGatitoComponent },
+      component: NewGatitoComponent,
+      canActivate: [AngularTokenService] },
     { path: 'gatitos/add/:id',
-      component: NewGatitoComponent },
+      component: NewGatitoComponent,
+      canActivate: [AngularTokenService] },
       { path: 'home',
       component: HomeComponent     },
     { path: 'navigation',
       component: NavigationBarComponent     },
       { path: 'footer',
       component: FooterComponent     },
-    { path: 'signup',
+    { path: 'auth',
       component: SignupComponent},
     {
-      path: 'signin',
-      component: LoginComponent
+      path: 'auth/signin',
+      component: LoginComponent,
     }
 ];
 

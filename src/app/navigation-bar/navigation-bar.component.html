@@ -15,8 +15,8 @@
       <div class="collapse navbar-collapse navbar-right" id="mynavbar">
         <ul class="nav navbar-nav">
           <li class="active"><a [routerLink]="['/home']">Home</a></li>
-          <li><a [routerLink]="['/perritos']">PERRITOS</a></li>
-          <li><a [routerLink]="['/gatitos']">GATITOS</a></li>
+          <li *ngIf="tokenAuthService.userSignedIn()"><a [routerLink]="['/perritos']">PERRITOS</a></li>
+          <li *ngIf="tokenAuthService.userSignedIn()"><a [routerLink]="['/gatitos']">GATITOS</a></li>
           <li><a href="#">CONTACTO</a></li>
           <li><a *ngIf="tokenAuthService.userSignedIn()" style="cursor:pointer" (click)="salir()" type="button">LOGOUT</a></li>
         </ul>

@@ -31,10 +31,11 @@ export class SignupComponent implements OnInit {
 
       (res) => {
 
-        if (res.status == 200){
-          console.log(res.json());
+        if (res.status != 500){
+          this.router.navigateByUrl('/home');
+          console.log(res);
+          
           alert("Registrado");
-          this.router.navigateByUrl('/signin');
         }
 
       },

@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GatitosComponent } from './gatitos/gatitos.component';
 import { NewGatitoComponent } from './new-gatito/new-gatito.component';
 import { SignupComponent } from './signup/signup.component';
-import {AngularTokenModule} from 'angular-token';
+import {AngularTokenModule, AngularTokenService} from 'angular-token';
 import { LoginComponent } from './login/login.component'
 
 @NgModule({
@@ -45,17 +45,20 @@ import { LoginComponent } from './login/login.component'
       {
         path: 'perritos',
         component: PerritosComponent,
-        data: {animation: 'Perritos'}
+        data: {animation: 'Perritos'},
+        canActivate: [AngularTokenService]
       },
       {
         path: 'perritos/add',
         component: NewPerritoComponent,
-        data: {animation: 'addPerritos'}
+        data: {animation: 'addPerritos'},
+        canActivate: [AngularTokenService]
       },
       {
         path: 'perritos/add/:id',
         component: NewPerritoComponent,
-        data: {animation: 'addPerritos'}
+        data: {animation: 'addPerritos'},
+        canActivate: [AngularTokenService]
       },
       {
         path: 'home',
@@ -64,24 +67,27 @@ import { LoginComponent } from './login/login.component'
       {
         path: 'gatitos',
         component: GatitosComponent,
-        data: {animation: 'Gatitos'}
+        data: {animation: 'Gatitos'},
+        canActivate: [AngularTokenService]
       },
       {
         path: 'gatitos/add',
         component: NewGatitoComponent,
-        data: {animation: 'addGatitos'}
+        data: {animation: 'addGatitos'},
+        canActivate: [AngularTokenService]
       },
       {
         path: 'gatitos/add/:id',
         component: NewGatitoComponent,
-        data: {animation: 'addGatitos'}
+        data: {animation: 'addGatitos'},
+        canActivate: [AngularTokenService]
       },
       {
-        path: 'signup',
+        path: 'auth',
         component: SignupComponent
       },
       {
-        path: 'signin',
+        path: 'auth/signin',
         component: LoginComponent
       }
     ]),
