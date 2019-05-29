@@ -9,7 +9,7 @@ import { AngularTokenService } from 'angular-token'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public rows;
+  public rows; 
 
 
   constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     var path = 'google_custom_search/index?parametro=' + cadena.value;
     this.apiService.get(path).subscribe((data )=>{
       console.log(data);
-      this.rows = data.items;
+      this.rows = data.items; 
       });
      
 
