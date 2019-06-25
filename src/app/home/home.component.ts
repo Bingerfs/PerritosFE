@@ -29,7 +29,12 @@ export class HomeComponent implements OnInit {
     var path = 'google_custom_search/index?parametro=' + cadena.value;
     this.apiService.googleSearch(path).subscribe((data )=>{
       console.log(data);
+<<<<<<< HEAD
       this.rows = this.data.items; 
+=======
+      //this.rows = data.items; 
+      this.rows = data;
+>>>>>>> 5aaddc67311ad421dc7187880a95c6d7c623fac4
       });
      
 
