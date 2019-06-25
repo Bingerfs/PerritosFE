@@ -43,7 +43,7 @@ import { UpdatePassComponent } from './update-pass/update-pass.component'
     BrowserAnimationsModule,
     BrowserModule,
     AngularTokenModule.forRoot({
-     apiBase: 'http://localhost:3000'
+     apiBase: 'https://sheltered-journey-95786.herokuapp.com/'
     }),
     RouterModule.forRoot([
       {
