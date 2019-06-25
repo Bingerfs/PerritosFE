@@ -1,0 +1,42 @@
+<header class="main-header" id="header">
+    <div class="bg-color">
+      <div class="container text-center">
+        <div class="wrapper wow fadeInUp delay-05s">
+          <br/>
+          <h4 class="title">Registrarse</h4>
+          <div class= "agregar-perritos">
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                  <div class="col-xs-8">
+                      <label for="current">Contrasegna actual:</label>
+                      <br/>
+            
+                      <input type="text" style="width: 300px" class="form-control nes-input" name="current" id="current" required
+                          [(ngModel)]="updatePass.current" name="current">
+                      <br/>
+  
+                      <label for="new">Contrasegna nueva:</label>
+                      <br/>
+            
+                      <input type="text" style="width: 300px" class="form-control nes-input" name="new" id="new" required
+                          [(ngModel)]="updatePass.new" name="new">
+                      <br/>
+  
+                      <label for="newConf">Confirmar nueva contrasegna:</label>
+                      <br/>
+            
+                      <input type="text" style="width: 300px" class="form-control nes-input" name="newConf" id="newConf" required
+                          [(ngModel)]="updatePass.newConf" name="newConf">
+                      <br/>
+  
+                  </div>
+                  <div>
+                    <br>
+                  <input type="submit" class="nes-btn is-primary" value="Registrar" />
+                  </div>
+              </div>
+            </form>
+            </div>      </div>
+      </div>
+    </div>
+  </header>
