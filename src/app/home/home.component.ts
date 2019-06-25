@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     this.apiService.get(path).subscribe((data )=>{
       console.log(data);
       //this.rows = data.items; 
+      this.rows = data;
       });
      
 
