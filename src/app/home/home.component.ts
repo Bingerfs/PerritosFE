@@ -11,6 +11,9 @@ import { AngularTokenService } from 'angular-token'
 export class HomeComponent implements OnInit {
   public rows; 
 
+  data = {
+    items: ''
+  };
 
   constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}
     
@@ -24,9 +27,9 @@ export class HomeComponent implements OnInit {
     let cadena = document.getElementById("search") as HTMLInputElement;
     console.log("buscando : " + cadena.value);
     var path = 'google_custom_search/index?parametro=' + cadena.value;
-    this.apiService.get(path).subscribe((data )=>{
+    this.apiService.googleSearch(path).subscribe((data )=>{
       console.log(data);
-      //this.rows = data.items; 
+      this.rows = this.data.items; 
       });
      
 
