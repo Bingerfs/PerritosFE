@@ -13,7 +13,9 @@ export class SignupComponent implements OnInit {
   signUpUser = {
     login: '',
     password: '',
-    passwordConfirmation: ''
+    passwordConfirmation: '',
+    name: '',
+    nickname: ''
   };
   
 
@@ -22,8 +24,6 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     if(this.tokenAuthService.userSignedIn()==true)
       this.router.navigateByUrl('/home');
-    
-    
   }
 
   onSubmitSign(){

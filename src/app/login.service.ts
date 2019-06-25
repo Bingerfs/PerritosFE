@@ -30,17 +30,9 @@ export class LoginService {
     }(document, 'script', 'facebook-jssdk'));
   }
 
-  login(credentials: any, callback: any) {
-    return this.apiservice.post("user/login", credentials).subscribe(response => {
-      let valid = callback(response);
-      if (valid)
-        this.success(credentials);
-    })
-  }
-
   private success(credentials: any) {
     localStorage.setItem("credentials", JSON.stringify(credentials));
-    this.router.navigateByUrl("/dashboard");
+    this.router.navigateByUrl("/home");
   }
 
  

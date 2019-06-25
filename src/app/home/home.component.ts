@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     var path = 'google_custom_search/index?parametro=' + cadena.value;
     this.apiService.get(path).subscribe((data )=>{
       console.log(data);
-      this.rows = data.items; 
+      //this.rows = data.items; 
       });
      
 

@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { GatitosComponent } from './gatitos/gatitos.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import {PerfilComponent} from './perfil/perfil.component'
+import { UpdatePassComponent } from './update-pass/update-pass.component'
 import {AngularTokenModule, AngularTokenService} from 'angular-token';
 
 
@@ -41,6 +43,14 @@ const APPROUTES: Routes = [
     {
       path: 'auth/signin',
       component: LoginComponent,
+    },
+    {
+      path: 'perfil',
+      component: PerfilComponent,
+    },
+    {
+      path: 'perfil/editPass',
+      component: UpdatePassComponent,
     }
 ];
 

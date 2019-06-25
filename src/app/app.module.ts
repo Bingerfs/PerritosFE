@@ -17,7 +17,9 @@ import { GatitosComponent } from './gatitos/gatitos.component';
 import { NewGatitoComponent } from './new-gatito/new-gatito.component';
 import { SignupComponent } from './signup/signup.component';
 import {AngularTokenModule, AngularTokenService} from 'angular-token';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { UpdatePassComponent } from './update-pass/update-pass.component'
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { LoginComponent } from './login/login.component'
 
     SignupComponent,
     LoginComponent,
+    PerfilComponent,
+    UpdatePassComponent,
   ],
   imports: [
     FormsModule,
@@ -89,6 +93,14 @@ import { LoginComponent } from './login/login.component'
       {
         path: 'auth/signin',
         component: LoginComponent
+      },
+      {
+        path: 'perfil',
+        component: PerfilComponent
+      },
+      {
+        path: 'perfil/editPass',
+        component: UpdatePassComponent,
       }
     ]),
   ],

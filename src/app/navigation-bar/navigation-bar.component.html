@@ -18,6 +18,7 @@
           <li *ngIf="tokenAuthService.userSignedIn()"><a [routerLink]="['/perritos']">PERRITOS</a></li>
           <li *ngIf="tokenAuthService.userSignedIn()"><a [routerLink]="['/gatitos']">GATITOS</a></li>
           <li><a href="#">CONTACTO</a></li>
+          <li *ngIf="tokenAuthService.userSignedIn()"><a [routerLink]="['/perfil']">PERFIL</a></li>
           <li><a *ngIf="tokenAuthService.userSignedIn()" style="cursor:pointer" (click)="salir()" type="button">LOGOUT</a></li>
         </ul>
       </div>
