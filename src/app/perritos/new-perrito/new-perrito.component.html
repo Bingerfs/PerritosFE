@@ -8,6 +8,9 @@
         <br/>
         <h4 class="title">PERRITOS</h4>
         <div class= "agregar-perritos">
+            <a href="https://www.dl.dropboxusercontent.com/s/ca0r0w22ia15j33/modelo.xls" download>
+              <button class="btn btn-send">Formulario</button>
+            </a>
           <form (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <div class="col-xs-8">
@@ -45,6 +48,11 @@
                     <input type="text" class="form-control nes-input" name="perritoColor" id="perritoColor" required
                             [(ngModel)]="perrito.color" name="perritoColor">
                     <br/>
+
+                    <label for="file">Subir archivo</label>
+                    <input type="file"
+                     id="file" class="form-control nes-input"
+                     (change)="handleFileInput($event.target.files)">
           
                 </div>
                 <div>
