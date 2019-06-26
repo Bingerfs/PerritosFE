@@ -9,6 +9,14 @@ import { AngularTokenService } from 'angular-token'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+ 
+  contact = {
+    nombre: '',
+    asunto: '',
+    destinatario: ''
+  };
+
+  
   public rows:any=[]; 
 
   constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}  
@@ -17,6 +25,7 @@ export class HomeComponent implements OnInit {
     
   }
   
+
 
   ngOnInit() {
   }
@@ -32,7 +41,19 @@ export class HomeComponent implements OnInit {
       this.rows = data;
       console.log(data);
       });
-     
+
+
+  }
+
+  public contactForm(){
+    this.apiService.sendmail("contactForm",this.contact).subscribe((res)=>{
+
+
+    });
+    alert("Enviado correctamente");
+
+    this.router.navigateByUrl('/home');
+
 
   }
 }

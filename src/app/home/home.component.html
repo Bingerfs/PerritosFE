@@ -164,30 +164,31 @@
       </div>
       <div class="col-md-12 col-sm-12">
         <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-          <h3 class="cont-title">Dejans tu mensaje</h3>
+          <h3 class="cont-title">Dejanos tu mensaje</h3>
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
           <div class="contact-info">
             <form action="" method="post" role="form" class="contactForm">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              <div class="form-group">    
+              <br/>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  [(ngModel)]="contact.nombre" required />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Apellido" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" [(ngModel)]="contact.destinatario" required/>
                 <div class="validation"></div>
               </div>
 
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" [(ngModel)]="contact.asunto" required />
                 <div class="validation"></div>
               </div>
-              <button type="submit" class="btn btn-send">Send</button>
+
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje" ></textarea>
+                <div class="validation"></div>
+              </div>
+              <button type="submit" class="btn btn-send" (click)="contactForm()">Send</button>
             </form>
           </div>
 
