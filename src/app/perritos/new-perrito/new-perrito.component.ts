@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./new-perrito.component.css']
 })
 export class NewPerritoComponent implements OnInit {
-
+  fileToUpload: File = null;
 
   public perrito : Perritos  = new Perritos();
 
@@ -43,6 +43,19 @@ export class NewPerritoComponent implements OnInit {
       this.perrito = new Perritos();
       this.router.navigateByUrl('/perritos');
     });
+    this.apiService.storeVetInfo("upload/", this.fileToUpload).subscribe(
+      (r)=>{
+        console.log(r);
+      },
+      (err)=>{
+        console.log(err);
+      }
+
+    );
 }
 
+public handleFileInput(files: FileList) {
+  this.fileToUpload = files.item(0);
+
+}
 }

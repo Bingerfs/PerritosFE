@@ -12,7 +12,7 @@ import { environment } from "../environments/environment"
   animations: [ slideInAnimation ]
 })
 export class AppComponent {
-  title = 'doggos';
+  title = 'Adopcion';
   
   
 }

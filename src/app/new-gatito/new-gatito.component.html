@@ -8,6 +8,10 @@
         <br/>
         <h4 class="title">gatitoS</h4>
         <div class= "agregar-gatitos">
+            <a href="https://www.dl.dropboxusercontent.com/s/ca0r0w22ia15j33/modelo.xls" download>
+              <button class="btn btn-send">Formulario</button>
+            </a>
+            <br/>
           <form (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <div class="col-xs-8">
@@ -44,6 +48,7 @@
                     <input type="text"  class="form-control nes-input" name="gatitoComidaFavorita" id="gatitocomida_favorita" required
                             [(ngModel)]="gatito.comidad_favorita" name="gatitoComidaFavorita">
                     <br/>
+
 
                     <label for="file">Subir archivo</label>
                     <input type="file"
