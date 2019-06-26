@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
 <header class="main-header" id="header">
   <div class="bg-color">
     <div class="container text-center">
@@ -12,7 +13,7 @@
         <h2 class="top-title">TÚ PUEDES CAMBIAR MI VIDA</h2>
         <h3 class="title">ADOPTAME</h3>
         <h4 class="sub-title">Construyamos un hogar</h4>
-        <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/auth/signin']" class="btn btn-submit">Ingresa ya</a>
+        <a *ngIf="tokenAuthService.userSignedIn()==null || !tokenAuthService.userSignedIn()" [routerLink]="['/auth/signin']" class="btn btn-submit">Ingresa ya</a>
         <br/>
         <br/>
 
@@ -27,11 +28,13 @@
     </div>
   </div>
 </header>
-<div class="busqueda" *ngFor="let item of rows.items">
-    <p class="row"> {{ item.title }}</p>
+<ng-container *ngIf="rows!=0">
+<blockquote  *ngFor="let item of rows.items">
+    <a><p class="row"> {{ item.title }}</p></a>
     <!-- <p class="row">Ir <a>{{ row.link }}</a></p> -->
 
-</div>
+</blockquote>
+</ng-container>
 <section id="cta-1">
   <div class="container">
     <div class="row">
@@ -95,7 +98,7 @@
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <a *ngIf="!tokenAuthService.userSignedIn()" [routerLink]="['/auth']" class="btn btn-submit">REGISTRATE YA</a>
+        <a *ngIf="tokenAuthService.userSignedIn()==null || !tokenAuthService.userSignedIn()"  [routerLink]="['/auth']" class="btn btn-submit">REGISTRATE YA</a>
       </div>
     </div>
   </div>

@@ -10,6 +10,7 @@ import { LoginService} from '../login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public errors: Array<string> = [];
   signInUser = {
     login: '',
     password: ''
@@ -37,9 +38,9 @@ export class LoginComponent implements OnInit {
       },
 
       (err) => {
+        this.errors=err.error.errors.full_messages;
         console.log(err);
-        alert("Error");
-        this.router.navigateByUrl('/signin');
+        this.router.navigateByUrl('/auth/signin');
       }
   )
   }

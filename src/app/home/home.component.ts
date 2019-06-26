@@ -9,7 +9,7 @@ import { AngularTokenService } from 'angular-token'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public rows; 
+  public rows:any=[]; 
 
   constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}  
 
