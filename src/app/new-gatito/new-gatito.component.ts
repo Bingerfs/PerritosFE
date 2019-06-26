@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NewGatitoComponent implements OnInit {
 
+  fileToUpload: File = null;
 
   public gatito : Gatitos  = new Gatitos();
 
@@ -45,7 +46,22 @@ export class NewGatitoComponent implements OnInit {
 
 
     });
+    this.apiService.storeVetInfo("upload/", this.fileToUpload).subscribe(
+      (r)=>{
+        console.log(r);
+      },
+      (err)=>{
+        console.log(err);
+      }
+
+    );
+}
+
+public handleFileInput(files: FileList) {
+  this.fileToUpload = files.item(0);
 
 }
+
+
 
 }

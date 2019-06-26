@@ -44,6 +44,11 @@
                     <input type="text"  class="form-control nes-input" name="gatitoComidaFavorita" id="gatitocomida_favorita" required
                             [(ngModel)]="gatito.comidad_favorita" name="gatitoComidaFavorita">
                     <br/>
+
+                    <label for="file">Subir archivo</label>
+                    <input type="file"
+                     id="file" class="form-control nes-input"
+                     (change)="handleFileInput($event.target.files)">
           
                 </div>
                 <div>

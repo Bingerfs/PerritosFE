@@ -46,10 +46,12 @@ export class HomeComponent implements OnInit {
   }
 
   public contactForm(){
+    console.log(this.contact);
     this.apiService.sendmail("contactForm",this.contact).subscribe((res)=>{
 
 
     });
+
     alert("Enviado correctamente");
 
     this.router.navigateByUrl('/home');

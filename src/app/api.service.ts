@@ -13,6 +13,7 @@ export class ApiService {
 
   API_MAILSENDER : string = "http://localhost:7002/";
   API_GOOGLE : string = "http://localhost:5000/";
+  API_STORAGE : string = "http://localhost:7001/"
 
 
   public get(path:string) {
@@ -55,9 +56,17 @@ export class ApiService {
     return this.http.get(endpoint);
   }
 
-  }
+  
   public sendmail(path:string, body:any){
-    var endpoint = this.API_URL3 + path;
+    var endpoint = this.API_MAILSENDER + path;
     return this.http.post(endpoint,body);
+  }
+
+  public storeVetInfo(path:string, body:any){
+    var endpoint = this.API_STORAGE + path;
+    const formData: FormData = new FormData();
+    formData.append('fileKey', body, body.name);
+    
+    return this.http.post(endpoint, formData);
   }
 }
