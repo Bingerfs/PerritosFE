@@ -7,12 +7,12 @@
   <div class="container">
     <div class="col-md-12">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle collapsed" (click)="toggleNavbar()" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
                       <span class="fa fa-bars"></span>
                   </button>
         <a href="index.html" class="navbar-brand">Adoptame</a>
       </div>
-      <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+      <div class="collapse navbar-collapse navbar-right" id="mynavbar" [ngClass]="{'show':navbarOpen}">
         <ul class="nav navbar-nav">
           <li class="active"><a [routerLink]="['/home']">Home</a></li>
           <li *ngIf="tokenAuthService.userSignedIn()"><a [routerLink]="['/perritos']">PERRITOS</a></li>
