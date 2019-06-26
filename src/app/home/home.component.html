@@ -27,8 +27,8 @@
     </div>
   </div>
 </header>
-<div class="busqueda" *ngFor="let row of rows">
-    <p class="row"> {{ row.title }}</p>
+<div class="busqueda" *ngFor="let item of rows.items">
+    <p class="row"> {{ item.title }}</p>
     <!-- <p class="row">Ir <a>{{ row.link }}</a></p> -->
 
 </div>

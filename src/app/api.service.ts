@@ -10,7 +10,7 @@ export class ApiService {
   constructor(public http: HttpClient) { }
 
   API_URL : string = "https://sheltered-journey-95786.herokuapp.com/";
-  API_URL2 : string = "http://localhost:5000/";
+  API_GOOGLE : string = "http://localhost:5000/";
 
   public get(path:string) {
 
@@ -45,8 +45,10 @@ export class ApiService {
     return this.http.put(endpoint,body);
   }
 
-  public googleSearch(){
+  public googleSearch(path:string){
   
+    var endpoint = this.API_GOOGLE + path;
+    return this.http.get(endpoint);
   }
 
 }

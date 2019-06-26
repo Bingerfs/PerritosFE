@@ -11,9 +11,11 @@ import { AngularTokenService } from 'angular-token'
 export class HomeComponent implements OnInit {
   public rows; 
 
+  constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}  
 
-  constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}
+  searchData={
     
+  }
   
 
   ngOnInit() {
@@ -24,10 +26,11 @@ export class HomeComponent implements OnInit {
     let cadena = document.getElementById("search") as HTMLInputElement;
     console.log("buscando : " + cadena.value);
     var path = 'google_custom_search/index?parametro=' + cadena.value;
-    this.apiService.get(path).subscribe((data )=>{
-      console.log(data);
+    this.apiService.googleSearch(path).subscribe((data)=>{
+      console.log();
       //this.rows = data.items; 
       this.rows = data;
+      console.log(data);
       });
      
 
