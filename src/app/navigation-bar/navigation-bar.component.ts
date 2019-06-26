@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
 import { AngularTokenService } from 'angular-token';
+import { CommonModule} from "@angular/common";
 
 @Component({
   selector: 'prac3fe-navigation-bar',
@@ -9,10 +10,15 @@ import { AngularTokenService } from 'angular-token';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor(private router: Router, public tokenAuthService:AngularTokenService) { 
+  constructor(private router: Router, public tokenAuthService:AngularTokenService) {
   }
 
   ngOnInit() {
+  }
+  navbarOpen=  false;
+  toggleNavbar()
+  {
+    this.navbarOpen=!this.navbarOpen;
   }
 
   salir(){
