@@ -10,6 +10,9 @@ import { AngularTokenService } from 'angular-token'
 })
 export class SignupComponent implements OnInit {
 
+  public invalid: Boolean;
+  public errors: Array<string> = [];
+
   signUpUser = {
     login: '',
     password: '',
@@ -41,9 +44,8 @@ export class SignupComponent implements OnInit {
       },
 
       (err) => {
+        this.errors=err.error.errors.full_messages;
         console.log(err);
-        alert("Error");
-        this.router.navigateByUrl('/signup');
       }
   )
   }
