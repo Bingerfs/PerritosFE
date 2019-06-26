@@ -9,12 +9,16 @@ import { AngularTokenService } from 'angular-token'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public rows; 
-
+  public rows;
+  contact = {
+    nombre: '',
+    asunto: '',
+    destinatario: ''
+  };
 
   constructor(private router: Router, public tokenAuthService:AngularTokenService,public apiService: ApiService) {}
-    
-  
+
+
 
   ngOnInit() {
   }
@@ -26,10 +30,22 @@ export class HomeComponent implements OnInit {
     var path = 'google_custom_search/index?parametro=' + cadena.value;
     this.apiService.get(path).subscribe((data )=>{
       console.log(data);
-      //this.rows = data.items; 
+      //this.rows = data.items;
       this.rows = data;
       });
-     
+
+
+  }
+
+  public contactForm(){
+    this.apiService.sendmail("contactForm",this.contact).subscribe((res)=>{
+
+
+    });
+    alert("Enviado correctamente");
+
+    this.router.navigateByUrl('/home');
+
 
   }
 }
